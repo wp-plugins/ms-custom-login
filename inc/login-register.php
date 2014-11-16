@@ -101,11 +101,6 @@ function ms_custom_login_sanitize_hex_color( $color ) {
  */
 
 function ms_custom_login_media_uploader( $options, $text_domain, $option_id, $option_name, $option_desc ) {
-	$options = $options;
-	$text_domain = $text_domain;
-	$option_id = $option_id;
-	$option_name = $option_name;
-	$option_desc = $option_desc;
 	$upload_remove_class = ! empty( $options[$option_name] ) ? 'remove-open' : 'upload-open';
 
 	if ( function_exists( 'wp_enqueue_media' ) ) : ?>
@@ -126,7 +121,7 @@ function ms_custom_login_media_uploader( $options, $text_domain, $option_id, $op
 			</div>
 		</div>
 	<?php else : ?>
-		<p><?php _e( 'Sorry, WordPress you are using is not supported. Upgrade your version of WordPress.', MS_CUSTOM_LOGIN_TEXTDOMAIN ); ?></p>
+		<p><?php _e( 'Sorry, WordPress you are using is not supported. Upgrade your WordPress.', MS_CUSTOM_LOGIN_TEXTDOMAIN ); ?></p>
 <?php endif;
 }
 
